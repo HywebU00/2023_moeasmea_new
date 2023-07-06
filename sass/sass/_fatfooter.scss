@@ -1,0 +1,112 @@
+.fatfooter {
+  @extend %clearfix;
+  overflow: hidden;
+  padding-bottom: 2em;
+  margin: 0 auto;
+  background: $fatfooterBgColor url("../images/fatfooter.jpg") no-repeat center 0;
+  @include screen('mobile') {
+    display: none;
+  }
+  .container {
+    overflow: hidden;
+    box-sizing: border-box;
+    @include gutter(0);
+  }
+  .btn-fatfooter {
+    font-size: .813em;
+    display: block;
+    min-width: 6em;
+    color: #FFF;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 1%;
+    top: .5em;
+    z-index: 90;
+    text-indent: -9999px;
+    border:1px solid #c3b0c5;
+    border-radius: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #FFF;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(-45deg);
+      left: 50%;
+      top: 12px;
+      margin-left: -6px;
+      transition: .3s ease-out;
+    }
+    &:hover,
+    &:focus {
+      border:1px solid #c3b0c5;
+      background: darken($aHover, 10);
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: none;
+      outline: none;
+      cursor: pointer;
+    }
+    &.close {
+      &:before {
+        transform: rotate(135deg) !important;
+        top: 5px;
+      }
+    }
+  }
+  nav {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 3em 0 0 0;
+    box-sizing: border-box;
+    ul {
+      display: flex;
+      @include li-reset;
+      li {
+        flex:1 1 16%;
+        box-sizing: border-box;
+        a {
+          line-height: 1.5;
+          display: block;
+          font-size: 1.125em;
+          font-weight: bold;
+          padding: .5em 0px;
+          box-sizing: border-box;
+          color: #fff;
+          &:hover{
+            box-shadow: none;
+            color: $importantColor;
+          }
+        }
+        ul {
+          display: block;
+          margin: 0;
+          padding:0 1em 0 0;                  
+          @include screen('mobile') {
+            width: auto;
+          }
+          li {
+            a {
+              display: block;
+              color: #c3b0c5;
+              font-weight: normal;
+              text-align: left;
+              font-size: 1em;
+              line-height: 1.5em;
+              padding: .2em 0;
+              background: none;
+              &:hover{
+                color: $importantColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

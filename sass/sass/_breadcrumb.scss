@@ -1,0 +1,19 @@
+.breadcrumb {
+    margin: 0px auto 1em;
+    ul {
+        @include li-reset;
+        li {
+            display: inline-block;
+            margin: 0px .1em .1em 0px;
+            &:before {
+                @extend %slash;
+            }
+            &:first-child:before {
+                display: none;
+            }
+        }
+    }
+    a {
+        @include aSetting_nocolor;
+    }
+}

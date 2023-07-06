@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #666;
+  &.noscroll {
+    position: static !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+// 最外圍預設為100%
+.wrapper {
+  width: 1200px;
+  margin: 0px auto;
+  background:#fff;
+  position: relative;
+
+  @include screen('tablet') {
+    width: 100%;
+  }
+  @include screen('mobile') {
+    background: #FFF;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  padding: 0;
+  margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+  }
+  .main {
+    position: relative;
+    margin: 0 auto;
+    padding:0;
+    // overflow: hidden;
+    // background: url("../images/mp/tbg.jpg") no-repeat right 747px,url("../images/mp/cbg.jpg") no-repeat left 1290px,url("../images/mp/bbg.jpg") no-repeat right bottom;
+    @include screen('mobile') {
+      background:none;
+    }
+    h2 {
+      line-height: 1.25em;
+    }
+  }
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+  padding-top: 130px;
+  background:none;
+  >.container {
+        @include gutter(); //gutter 代表左右要留白
+        display: flex;
+
+      }
+      .left_block {
+        flex:0 0 260px;
+        max-width: 260px;
+        // float: left;
+        // width: 260px;
+        margin-right: 40px;
+        @include screen('tablet') {
+          display: none;
+        }
+      }
+      .center_block {
+       flex:auto;
+       max-width: 100%;
+       overflow: hidden;
+       padding-bottom: 2em;
+     }
+     &.small_size {
+      font-size: .938em;
+    }
+    &.large_size {
+      font-size: 1.125em;
+    }
+  }
+
+  .hidden{
+    display: none;
+  }
+
+
+
+
+  .fflash{
+    &:before {
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      left: auto;
+      right: 0;
+      background: #fff;
+      z-index: 2;
+    }
+    &:after {
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      left: auto;
+      right: 0;
+      background: $aColor;
+      z-index: 1;
+    }
+    &.effect{
+      &:before {
+        width: 0;
+        -webkit-transition: visibility 0s .5s, width .5s cubic-bezier(.55, .055, .675, .19);
+        transition: visibility 0s .5s, width .5s cubic-bezier(.55, .055, .675, .19);
+        visibility: hidden;
+      }
+      &:after {
+        width: 0;
+        -webkit-transition: background-color 0s .8s, visibility 0s 1.2s, width .5s .5s cubic-bezier(.215, .61, .355, 1);
+        transition: background-color 0s .8s, visibility 0s 1.2s, width .5s .5s cubic-bezier(.215, .61, .355, 1);
+        visibility: hidden;
+      }
+    }
+  }
