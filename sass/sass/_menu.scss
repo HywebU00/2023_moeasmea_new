@@ -33,7 +33,7 @@
         min-height: 2.5em;
         font-weight: bold;
         line-height: 2.5em;
-        color: #fff; 
+        color: #fff;
         outline: none;
         text-decoration: none;
       }
@@ -47,12 +47,13 @@
       }
       &:hover {
         >a {
-          color: $aHover;
-          &:after {
-            border: 2px solid $aHover;
-            border-bottom: none;
-            border-left: none;
-          }
+          color: #00fffc;
+          text-decoration: underline;
+          // &:after {
+          //   border: 2px solid $aHover;
+          //   border-bottom: none;
+          //   border-left: none;
+          // }
         }
       }
     }

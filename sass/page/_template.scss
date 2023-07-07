@@ -43,7 +43,7 @@ body {
     margin: 0 auto;
     padding:0;
     // overflow: hidden;
-    // background: url("../images/mp/tbg.jpg") no-repeat right 747px,url("../images/mp/cbg.jpg") no-repeat left 1290px,url("../images/mp/bbg.jpg") no-repeat right bottom;
+    background: url("../images/mp/tbg.jpg") no-repeat right 747px,url("../images/mp/cbg.jpg") no-repeat left 1290px,url("../images/mp/tbg.jpg") no-repeat right 2300px,url("../images/mp/cbg.jpg") no-repeat left 3000px;
     @include screen('mobile') {
       background:none;
     }
@@ -54,7 +54,7 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-  padding-top: 130px;
+  padding-top: 30px;
   background:none;
   >.container {
         @include gutter(); //gutter 代表左右要留白

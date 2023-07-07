@@ -461,11 +461,11 @@
 }
 
 .achievement_block {
-  background: url(../images/blockbg.jpg) no-repeat 0 center;
-  background-size: cover;
-  @include screen('mobile') {
-    background: none;
-  }
+  // background: url(../images/blockbg.jpg) no-repeat 0 center;
+  // background-size: cover;
+  // @include screen('mobile') {
+  //   background: none;
+  // }
   .container {
     padding: 0 35px;
   }
