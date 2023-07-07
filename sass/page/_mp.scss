@@ -232,7 +232,7 @@
         width: 40px;
         height: 1px;
         background: $primaryColor;
-        background: linear-gradient(90deg, $primaryColor 50%, #D33C06 50%);
+        background: linear-gradient(90deg, $primaryColor 50%, $primaryColor 50%);
         position: absolute;
         left: -20px;
         top: 19px;
@@ -244,7 +244,7 @@
         width: 40px;
         height: 1px;
         background: $primaryColor;
-        background: linear-gradient(-90deg, $primaryColor 50%, #D33C06 50%);
+        background: linear-gradient(-90deg, $primaryColor 50%, $primaryColor 50%);
         position: absolute;
         right: -20px;
         top: 19px;
@@ -461,6 +461,11 @@
 }
 
 .achievement_block {
+  background: url(../images/blockbg.jpg) no-repeat 0 center;
+  background-size: cover;
+  @include screen('mobile') {
+    background: none;
+  }
   .container {
     padding: 0 35px;
   }
@@ -473,18 +478,21 @@
     }
     li {
       width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
       @include screen('tablet') {
         width: 270px;
       }
       @include screen('mobile') {
         width: 100%;
         margin-bottom: 1em;
+        box-shadow: none;
       }
       a {
         border: 1px solid #fff;
         padding: 10px;
         display: block;
         height: 100%;
+        background: #fff;
         @include screen('mobile') {
           padding: 0;
         }
@@ -517,7 +525,7 @@
         .title {
           display: block;
           font-size: 1.125em;
-          color: #D33C06;
+          color: $primaryColor;
           margin-bottom: 0.5em;
         }
         .text {
@@ -536,7 +544,7 @@
             }
           }
           .title {
-            color: #D33C06;
+            color: $primaryColor;
             text-decoration: underline;
           }
           .text {
@@ -622,13 +630,15 @@
         border-color: $primaryColor;
         background: transparent;
         color: #fff;
+        &:hover{
+          background: $secondaryColor;
+          color:#fff
+        }
       }
     }
-    &:hover {
-      a {
-        background: transparent;
-        color: $secondaryColor;
-      }
+    a:hover {
+      background: transparent;
+      color: $secondaryColor;
     }
   }
   .tabContent {
@@ -655,12 +665,12 @@
         position: absolute;
         top: calc(50% - 3px);
         left: 0;
-        background: rgb(53, 45, 113);
-        background: linear-gradient(90deg, rgba(53, 45, 113, 0) 0%, #f7721e 5%, #fbb90f 95%, rgba(175, 0, 141, 0) 100%);
+        background: $primaryColor;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $primaryColor 5%, #00c6ff 95%, rgba(0, 0, 0, 0) 100%);
         @include screen('mobile') {
           width: 5px;
           height: 100%;
-          background: linear-gradient(180deg, rgba(53, 45, 113, 0) 0%,#f7721e 5%, #fbb90f 95%, rgba(175, 0, 141, 0) 100%);
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,$primaryColor 5%, #00c6ff 95%, rgba(0, 0, 0, 0) 100%);
           top: 0;
           left: 10px;
         }
@@ -691,7 +701,7 @@
           height: 16px;
           display: block;
           background: #fff;
-          border: 5px solid #e67d39;
+          border: 5px solid #2b56a2;
           border-radius: 50%;
           position: absolute;
           left: 70px;
@@ -713,7 +723,7 @@
             top: auto;
           }
           &:before {
-            border: 5px solid #f18d3c;
+            border: 5px solid #376ab2;
             top: -13px;
             @include screen('mobile') {
               top: 70px;
@@ -726,7 +736,7 @@
             left: auto;
           }
           &:before {
-            border: 5px solid #e9953d;
+            border: 5px solid #437fc3;
           }
         }
         &:nth-child(4) {
@@ -741,7 +751,7 @@
             top: auto;
           }
           &:before {
-            border: 5px solid #eba13f;
+            border: 5px solid #4e93d3;
             top: -13px;
             @include screen('mobile') {
               top: 70px;
@@ -754,7 +764,7 @@
             left: auto;
           }
           &:before {
-            border: 5px solid #fbb90f;
+            border: 5px solid #5ba9e4;
           }
         }
         a {
@@ -941,7 +951,7 @@
         position: relative;
         &:before {
           content: "◆";
-          color: #D33C06;
+          color: $secondaryColor;
           display: block;
           position: absolute;
           left: 0;

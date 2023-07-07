@@ -3,7 +3,7 @@
   overflow: hidden;
   padding-bottom: 2em;
   margin: 0 auto;
-  background: $fatfooterBgColor url("../images/fatfooter.jpg") no-repeat center 0;
+  background: url("../images/fatfooter.jpg") no-repeat 0 0,url("../images/footer.jpg") repeat-y 0 0;
   @include screen('mobile') {
     display: none;
   }
@@ -24,7 +24,7 @@
     top: .5em;
     z-index: 90;
     text-indent: -9999px;
-    border:1px solid #c3b0c5;
+    border:1px solid #fff;
     border-radius: 0;
     &:before {
       content: "";
@@ -80,20 +80,21 @@
           color: #fff;
           &:hover{
             box-shadow: none;
-            color: $importantColor;
+            color: #fff;
+            text-decoration: underline;
           }
         }
         ul {
           display: block;
           margin: 0;
-          padding:0 1em 0 0;                  
+          padding:0 1em 0 0;
           @include screen('mobile') {
             width: auto;
           }
           li {
             a {
               display: block;
-              color: #c3b0c5;
+              color: #rgba(255,255,255,.7);
               font-weight: normal;
               text-align: left;
               font-size: 1em;
@@ -101,7 +102,7 @@
               padding: .2em 0;
               background: none;
               &:hover{
-                color: $importantColor;
+                color: #fff;
               }
             }
           }

@@ -4,7 +4,7 @@ footer {
   text-align: left;
   font-size: 0.9375em;
   padding: 1em 0;
-  background: $fatfooterBgColor;
+  background: url("../images/footer.jpg") repeat-y 0 0;
   .container {
     @include gutter(0);
     >div {
@@ -68,21 +68,21 @@ footer {
       transition: all .3s ease-out;
       @include screen('mobile') {
         padding: .5em;
-        background: #392d71;
+        background: #D83E0A;
         border-radius:4px;
         margin-right: 0;
       }
       &:hover,
       &:focus {
         text-decoration: underline;
-        color: #ff0096;
+
       }
     }
   }
 }
 p {
   line-height: 1.6em;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.7);
   margin-top: 0;
   margin-bottom: 4px;
   a{
@@ -97,10 +97,10 @@ p {
 .counter {
   display: inline-block;
   margin-right: 5px;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.7);
   em {
     font-style: normal;
-    color: $secondaryColor;
+    color: #fff;
     padding: 0 .5em;
   }
 }

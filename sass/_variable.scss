@@ -3,11 +3,11 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #D33C06; //主色
-$secondaryColor: #f15a24; //輔色
-$lightColor: #8000aa; //點綴
-$linkColor: #D33C06; //連結
-$importantColor: #c7005b; //重要
+$primaryColor: #0156a5; //主色
+$secondaryColor: #1d98d7; //輔色
+$lightColor: #00baff; //點綴
+$linkColor: #0156a5; //連結
+$importantColor: #D83E0A; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $color-blue: #21baff;
 $color-green: #5cb85c;
@@ -21,12 +21,12 @@ $color-hr: #666; //hr顏色
 $color-word: #222; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
-$aColor: #D33C06;
+$aColor: #0152a5;
 $aHover: lighten($aColor, 10);
 
 // 表單focus顏色
-$form-focus: #D33C06; //表單
-$form-btn: #D33C06; //表單
+$form-focus: #0156a5; //表單
+$form-btn: #0156a5; //表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定
